@@ -5,12 +5,12 @@ grails.plugin.location.'transmart-core-db' = '../.'
 def defaultVMSettings = [
         maxMemory: 768,
         minMemory: 64,
-        debug:     false,
+        debug:     true,
         maxPerm:   256
 ]
 
 grails.project.fork = [
-        test:    [*: defaultVMSettings, daemon:      true],
+        test:    false,
         run:     [*: defaultVMSettings, forkReserve: false],
         war:     [*: defaultVMSettings, forkReserve: false],
         console: defaultVMSettings
@@ -98,7 +98,7 @@ grails.project.dependency.resolution = {
     }
 
     plugins {
-        build ':release:3.0.1', ':rest-client-builder:2.0.1', {
+        build ':release:3.0.1', ':rest-client-builder:2.1.1', {
             export = false
         }
 
