@@ -29,6 +29,7 @@ grails.project.dependency.resolution = {
     repositories {
         //  grailsPlugins()
         // grailsHome()
+        mavenRepo "file://${System.getProperty('user.home')}/m2local/etriksv3"
         mavenLocal()
         grailsCentral()
 
@@ -39,7 +40,7 @@ grails.project.dependency.resolution = {
     }
 
     dependencies {
-        compile('org.transmartproject:transmart-core-api:16.1-30')
+        compile('org.transmartproject:transmart-core-api:16.1.30')
         compile group: 'com.google.guava', name: 'guava', version: '14.0.1'
 
         runtime('org.postgresql:postgresql:9.3-1100-jdbc41') {
